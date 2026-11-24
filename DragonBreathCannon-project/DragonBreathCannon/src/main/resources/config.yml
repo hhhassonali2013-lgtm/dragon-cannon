@@ -1,0 +1,28 @@
+# ---------------- DragonBreathCannon ----------------
+# Each "shell" is a dragon breath charge that falls from the sky and
+# leaves a real dragon breath cloud (Harming) where it lands.
+
+cooldown-seconds: 10.0        # per player (permission dragoncannon.bypasscooldown ignores it)
+max-target-distance: 256.0    # how far you can aim with the look-at targeting
+start-height: 120.0           # how many blocks above the target the shells start (clamped to build limit)
+max-shells: 1200              # safety cap so a bad config can't kill your TPS
+damage-amplifier: 1           # 1 = Harming II (same as the vanilla dragon breath cloud)
+trail-particles-per-shell: 1  # falling trail particles per shell per tick (0 = none, lower = less client lag)
+
+# VERSION 1: NORMAL - concentric circles like Wemmbu's orbital strike cannon
+normal:
+  rings: 10                   # number of circles around the center
+  ring-spacing: 3.0           # blocks between circles AND between shells on a circle
+  ring-delay-ticks: 3         # delay between one circle and the next (makes the ripple)
+  fall-speed: 2.5             # blocks per tick
+  cloud-radius: 3.0
+  cloud-duration: 200         # ticks (vanilla dragon breath is 600, lower = less lag)
+
+# VERSION 2: STAB - one tight column of shots, stacked on the same spot
+stab:
+  shots: 40                   # how many shells in the column
+  interval-ticks: 1           # ticks between shells (1 = solid beam)
+  fall-speed: 4.0
+  radius: 0.0                 # 0 = single-block column, e.g. 1.0 makes the beam thicker
+  cloud-radius: 2.5
+  cloud-duration: 120

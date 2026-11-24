@@ -1,0 +1,23 @@
+name: DragonBreathCannon
+version: '${project.version}'
+main: me.dogs.dragoncannon.DragonCannonPlugin
+api-version: '1.21'
+description: Orbital dragon breath cannon (rings + stab shot), inspired by Wemmbu's orbital strike cannon.
+commands:
+  dragoncannon:
+    description: Fire, give or reload the orbital dragon breath cannon
+    usage: /<command> <normal|stab|give|reload>
+    aliases: [dbc, dcannon]
+permissions:
+  dragoncannon.use:
+    description: Fire the cannon
+    default: op
+  dragoncannon.give:
+    description: Give cannon items
+    default: op
+  dragoncannon.reload:
+    description: Reload the config
+    default: op
+  dragoncannon.bypasscooldown:
+    description: Ignore the cooldown
+    default: op
